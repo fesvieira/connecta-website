@@ -1,19 +1,26 @@
-import { LabelMedium } from "@/styles/typography";
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
+import { LabelMedium } from "@/styles/typography";
+
 export const Container = styled.button`
-  display: flex;
+  ${LabelMedium}
 
   border-radius: 2rem;
   border: 0px;
-  background-color: ${theme.primaryContainer};
-`;
-
-export const Label = styled.p`
-  ${LabelMedium}
 
   color: ${theme.onPrimaryContainer};
+  background-color: ${theme.primaryContainer};
 
   padding: 0.5rem 1rem;
-  margin: 0;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${theme.primaryContainer};
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;

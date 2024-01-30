@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { css } from "styled-components";
 
+const inter = Inter({ subsets: ["latin-ext"] });
 
 const normal = 400;
 const bold = 700;
@@ -26,5 +27,6 @@ export const TitleMedium = css`
 export const LabelMedium = css`
   font-weight: ${bold};
   font-size: 1.25rem;
+  letter-spacing: 2px;
   line-height: 1.25rem;
 `;

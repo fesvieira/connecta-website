@@ -1,16 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
+import { AppButton } from "@/components/AppButton/AppButton";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { AppButton } from "@/components/AppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  function aoba() {
+    console.log("Aoba");
+  }
   return (
-    <>
-      <h1>Home</h1>
-      <AppButton />
-    </>
+    <div className={inter.className}>
+      <h1>PLAY</h1>
+      <AppButton onClick={aoba}>PLAY</AppButton>
+    </div>
   );
 }

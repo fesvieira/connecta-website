@@ -1,18 +1,27 @@
-import { FC } from "react";
-import { Container, Label } from "./styles";
+import { FC, useState } from "react";
+import { Container } from "./styles";
 
-export type AppButtonProps = {
-  text: string;
-  debounce: number;
-  isLoading: boolean;
-  isEnabled: boolean;
-  onClick: () => undefined;
-};
+export interface AppButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  isLoading?: boolean;
+  onClick: () => void;
+}
 
-export const AppButton: FC = ({ props: AppButtonsProps }) => {
-  return (
-    <Container>
-      <Label>Test</Label>
-    </Container>
-  );
+export const AppButton: FC<AppButtonProps> = ({
+  onClick,
+  ...props
+}: AppButtonProps) => {
+  const [isEnabled, setIsEnabled] = useState(true);
+
+  const debouncedOnClick = () => {
+    if (isEnabled) {
+      setIsEnabled(false);
+      onClick();
+      setTimeout(() => {
+        setIsEnabled(true);
+      }, 1000);
+    }
+  };
+  
+  return <Container onClick={debouncedOnClick} {...props} />;
 };
