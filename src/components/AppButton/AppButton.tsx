@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Container, Label } from "./styles";
 
 export type AppButtonProps = {
   text: string;
@@ -10,8 +11,8 @@ export type AppButtonProps = {
 
 export const AppButton: FC = ({ props: AppButtonsProps }) => {
   return (
-    <>
-      <h1>AppButton</h1>
-    </>
+    <Container>
+      <Label>Test</Label>
+    </Container>
   );
 };
