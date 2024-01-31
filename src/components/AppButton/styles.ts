@@ -11,7 +11,7 @@ export const Container = styled.button`
   color: ${theme.onPrimaryContainer};
   background-color: ${theme.primaryContainer};
 
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
 
   transition: all 0.2s ease-in-out;
 
