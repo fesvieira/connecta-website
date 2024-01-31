@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
 import { LabelMedium } from "@/styles/typography";
+import { Constants as C } from "@/constants/Constants";
 
 export const Container = styled.button`
   ${LabelMedium}
@@ -12,6 +13,9 @@ export const Container = styled.button`
   background-color: ${theme.primaryContainer};
 
   padding: 1rem 2rem;
+  margin: 1rem;
+
+  width: 30rem;
 
   transition: all 0.2s ease-in-out;
 
@@ -23,4 +27,8 @@ export const Container = styled.button`
   &:active {
     transform: scale(0.9);
   }
+
+  @media ${C.mediaQueries.mobile} {
+    width: 90%;
+  };
 `;

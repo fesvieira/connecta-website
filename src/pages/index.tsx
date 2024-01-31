@@ -15,7 +15,9 @@ export default function Home() {
       <Image src="/icon.png" alt="Connecta" width={200} height={200} />
 
       <h1>Bem vindo ao connecta</h1>
-      <p>Forme grupos de 4 palavras!</p>
+
+      <p>Forme 4 grupos de 4 palavras!</p>
+      
       <AppButton onClick={aoba}>PLAY</AppButton>
     </Container>
   );

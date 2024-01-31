@@ -3,11 +3,12 @@ import { Container } from "./styles";
 
 export interface AppButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  isLoading?: boolean;
+  label?: string;
   onClick: () => void;
 }
 
 export const AppButton: FC<AppButtonProps> = ({
+  label,
   onClick,
   ...props
 }: AppButtonProps) => {
@@ -22,6 +23,11 @@ export const AppButton: FC<AppButtonProps> = ({
       }, 1000);
     }
   };
-  
-  return <Container onClick={debouncedOnClick} {...props} />;
+
+  return (
+    <Container onClick={debouncedOnClick} {...props}>
+      {label}
+      {props.children}
+    </Container>
+  );
 };

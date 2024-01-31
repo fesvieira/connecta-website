@@ -8,15 +8,23 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  gap: 2rem;
-
   height: 100vh;
   width: 100%;
 
   background-image: linear-gradient(to bottom, #2c488e, #011044);
   color: white;
 
+  padding: 1rem;
+
   & > h1 {
     ${TitleMedium}
+
+    text-align: center;
+
+    margin-bottom: 4rem;
+  }
+
+  & > p {
+    text-align: center;
   }
 `;
