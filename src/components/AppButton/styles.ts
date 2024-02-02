@@ -19,9 +19,13 @@ export const Container = styled.button`
 
   transition: all 0.2s ease-in-out;
 
+  z-index: 2;
+
+  overflow: hidden;
+
   &:hover {
-    background-color: ${theme.primaryContainer};
-    opacity: 0.8;
+    filter: brightness(0.8);
+    cursor: pointer;
   }
 
   &:active {
@@ -29,6 +33,6 @@ export const Container = styled.button`
   }
 
   @media ${C.mediaQueries.mobile} {
-    width: 90%;
-  };
+    width: calc(100% - 2rem);
+  }
 `;
