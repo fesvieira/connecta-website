@@ -4,7 +4,7 @@ import { Position } from "@/components/BackgroundDecoration/BackgroundDecoration
 import { Container } from "@/styles/Home";
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import Link from "next/link";
+import { AppStrings as S } from "@/constants/AppStrings";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +19,11 @@ export default function Home() {
 
       <Image src="/icon.png" alt="Connecta" width={200} height={200} />
 
-      <h1>Bem vindo ao connecta</h1>
+      <h1>{S.welcomeMessage}</h1>
 
-      <p>Forme 4 grupos de 4 palavras!</p>
+      <p>{S.description}</p>
 
-      <AppButton onClick={aoba}>PLAY</AppButton>
+      <AppButton onClick={aoba}>{S.playButton}</AppButton>
 
       <BackgroundDecoration
         position={Position.Bottom}
