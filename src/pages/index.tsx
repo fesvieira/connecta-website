@@ -1,10 +1,9 @@
 import { AppButton } from "@/components/AppButton/AppButton";
-import { BackgroundDecoration } from "@/components/BackgroundDecoration";
-import { Position } from "@/components/BackgroundDecoration/BackgroundDecoration";
-import { Container } from "@/styles/Home";
+import { HomeContainer } from "@/styles/Home";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { AppStrings as S } from "@/constants/AppStrings";
+import { TextBodyMedium, TitleMedium } from "@/styles/global";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,21 +13,14 @@ export default function Home() {
   };
 
   return (
-    <Container className={inter.className}>
-      <BackgroundDecoration position={Position.Top} src="home_bg_top.svg" />
+    <HomeContainer className={inter.className}>
+      <Image src="/icon.png" alt={S.connecta} width={200} height={200} />
 
-      <Image src="/icon.png" alt="Connecta" width={200} height={200} />
+      <TitleMedium>{S.welcomeMessage}</TitleMedium>
 
-      <h1>{S.welcomeMessage}</h1>
-
-      <p>{S.description}</p>
+      <TextBodyMedium $margin="4rem 0 1rem 0">{S.description}</TextBodyMedium>
 
       <AppButton onClick={aoba}>{S.playButton}</AppButton>
-
-      <BackgroundDecoration
-        position={Position.Bottom}
-        src="home_bg_bottom.svg"
-      />
-    </Container>
+    </HomeContainer>
   );
 }

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Container } from "./styles";
+import { AppButtonContainer } from "./styles";
 
 export interface AppButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,9 +25,9 @@ export const AppButton: FC<AppButtonProps> = ({
   };
 
   return (
-    <Container onClick={debouncedOnClick} {...props}>
+    <AppButtonContainer onClick={debouncedOnClick} {...props}>
       {label}
       {props.children}
-    </Container>
+    </AppButtonContainer>
   );
 };

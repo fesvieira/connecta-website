@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
-import { LabelMedium } from "@/styles/typography";
 import { Constants as C } from "@/constants/Constants";
 
-export const Container = styled.button`
-  ${LabelMedium}
+export const AppButtonContainer = styled.button`
+  font-size: 1.125rem;
+  font-weight: bold;
 
   border-radius: 2rem;
   border: 0px;

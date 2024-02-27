@@ -1,8 +1,6 @@
-import { Constants } from "@/constants/Constants";
 import { Category } from "@/models/Category";
 import { getDailyWords } from "@/pages/api/get-daily-words";
 import { UUID, randomUUID } from "crypto";
-import { get } from "http";
 import { create } from "zustand";
 import { Word } from "@/models/Word";
 
